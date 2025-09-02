@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Calculadora EBAU 2025 online gratuita. Calcula tu nota de Selectividad fácilmente y conoce tu nota de acceso a la universidad.">
+  <meta name="keywords" content="calculadora EBAU, nota Selectividad, fase general, fase específica, universidad, ponderación asignaturas">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora EBAU 2025 - Calcula tu nota de Selectividad fácilmente</title>
+
+  <!-- Favicon y logo -->
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="logo.png">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Calculadora EBAU 2025">
+  <meta property="og:description" content="Calcula tu nota de Selectividad fácilmente y conoce tu nota de acceso a la universidad.">
+  <meta property="og:image" content="logo.png">
+  <meta property="og:url" content="https://tu-web.netlify.app">
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8730547793276637"
+     crossorigin="anonymous"></script>
+
+  <style>
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background: linear-gradient(135deg, #e0f7fa, #f1f8ff); color: #333; }
+    header { background: #004a99; color: white; padding: 20px; text-align:center; display:flex; align-items:center; justify-content:center; gap:15px; flex-wrap:wrap; }
+    header img.logo { height:50px; }
+    header div { text-align:center; }
+    header h1 { margin: 0; font-size: 28px; }
+    header p { margin: 5px 0 0; font-size: 16px; }
+    .container { max-width: 900px; margin: 30px auto; background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    .section { margin-bottom: 25px; }
+    h3 { border-left: 5px solid #004a99; padding-left: 10px; color: #004a99; }
+    label { display: block; margin: 10px 0 6px; font-weight: 600; }
+    input, select { width: 100%; padding: 10px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc; font-size: 15px; }
+    button { background: #28a745; color: white; padding: 14px; border: none; border-radius: 8px; cursor: pointer; width: 100%; font-size: 18px; font-weight: bold; transition: background 0.3s; }
+    button:hover { background: #218838; }
+    .result { background: #e8f5e9; padding: 20px; border-radius: 10px; margin-top: 20px; font-weight: bold; color: #2e7d32; font-size: 18px; }
+    footer { text-align: center; margin-top: 40px; padding: 20px; background: #f1f1f1; font-size: 14px; color: #666; }
+    .faq, .howto { margin-top: 40px; }
+    .faq h3, .howto h3 { margin-bottom: 15px; }
+    .faq p, .howto p { margin: 8px 0; }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Calculadora EBAU" class="logo">
+    <div>
+      <h1>Calculadora EBAU / Selectividad 2025</h1>
+      <p>Introduce tus calificaciones y calcula tu nota de acceso a la universidad</p>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <!-- Anuncio 1 -->
+    <ins class="adsbygoogle"
+         style="display:block; margin-bottom:20px;"
+         data-ad-client="ca-pub-8730547793276637"
+         data-ad-slot="4099424194"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+    <!-- Cómo usar la calculadora -->
+    <div class="howto">
+      <h3>Cómo usar la calculadora</h3>
+      <p>1. Introduce tu media de Bachillerato.</p>
+      <p>2. Introduce tus notas de la fase general: Lengua, Idioma extranjero, Materia de modalidad y Historia.</p>
+      <p>3. Si tienes lengua cooficial, introdúcela en su casilla.</p>
+      <p>4. Introduce tus notas de la fase específica y selecciona la ponderación (0.1 o 0.2).</p>
+      <p>5. Pulsa <strong>Calcular mi nota EBAU</strong> para obtener tu resultado.</p>
+      <p>💡 Puedes usar la tecla Enter para pasar de una casilla a otra de forma rápida.</p>
+    </div>
+
+    <div class="section">
+      <label for="mediaBach">Media de Bachillerato</label>
+      <input type="number" id="mediaBach" step="0.01" min="0" max="10">
+    </div>
+
+    <div class="section">
+      <h3>Fase General (Obligatoria)</h3>
+      <label>Lengua Castellana y Literatura</label>
+      <input type="number" id="castellano" step="0.01" min="0" max="10">
+
+      <label>Lengua Extranjera</label>
+      <input type="number" id="extranjera" step="0.01" min="0" max="10">
+
+      <label>Materia de Modalidad (Matemáticas II / Latín II / etc.)</label>
+      <input type="number" id="modalidad" step="0.01" min="0" max="10">
+
+      <label>Historia (elige una)</label>
+      <input type="number" id="historiaEsp" placeholder="Historia de España" step="0.01" min="0" max="10">
+      <input type="number" id="historiaFilo" placeholder="Historia de la Filosofía" step="0.01" min="0" max="10">
+
+      <label>¿Lengua cooficial? (opcional)</label>
+      <input type="number" id="cooficial" placeholder="Nota lengua cooficial" step="0.01" min="0" max="10">
+    </div>
+
+    <div class="section">
+      <h3>Fase Específica (Voluntaria)</h3>
+      <label>Asignatura 1</label>
+      <input type="number" id="esp1" step="0.01" min="0" max="10" placeholder="Nota">
+      <select id="pond1">
+        <option value="0">Ponderación</option>
+        <option value="0.1">0.1</option>
+        <option value="0.2">0.2</option>
+      </select>
+
+      <label>Asignatura 2</label>
+      <input type="number" id="esp2" step="0.01" min="0" max="10" placeholder="Nota">
+      <select id="pond2">
+        <option value="0">Ponderación</option>
+        <option value="0.1">0.1</option>
+        <option value="0.2">0.2</option>
+      </select>
+    </div>
+
+    <!-- Anuncio 2 -->
+    <ins class="adsbygoogle"
+         style="display:block; margin:20px 0;"
+         data-ad-client="ca-pub-8730547793276637"
+         data-ad-slot="9160179184"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+    <button onclick="calcularNota()">Calcular mi nota EBAU</button>
+
+    <div id="resultado" class="result" style="display:none;"></div>
+
+    <!-- FAQ -->
+    <div class="faq">
+      <h3>Preguntas Frecuentes (FAQ)</h3>
+      <p><strong>¿Cuál es la nota máxima de la EBAU?</strong> La nota máxima es 14, combinando la fase general y la fase específica.</p>
+      <p><strong>¿Es obligatorio presentar asignaturas específicas?</strong> No, son opcionales, pero ayudan a subir nota.</p>
+      <p><strong>¿Qué pasa si tengo lengua cooficial?</strong> Se incluye como materia obligatoria en la fase general.</p>
+    </div>
+
+    <!-- Anuncio 3 -->
+    <ins class="adsbygoogle"
+         style="display:block; margin-top:20px;"
+         data-ad-client="ca-pub-8730547793276637"
+         data-ad-slot="7487741537"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+  </div>
+
+  <footer>
+    <p>© 2025 Calculadora EBAU - Herramienta online para calcular tu nota de Selectividad fácilmente.</p>
+  </footer>
+
+  <!-- Structured Data FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Cuál es la nota máxima de la EBAU?",
+        "acceptedAnswer": { "@type": "Answer", "text": "La nota máxima es 14, combinando fase general y específica." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Es obligatorio presentar asignaturas específicas?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No, son opcionales, pero ayudan a subir nota." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué pasa si tengo lengua cooficial?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Se incluye como materia obligatoria en la fase general." }
+      }
+    ]
+  }
+  </script>
+
+  <script>
+    function calcularNota(){
+      let mediaBach = parseFloat(document.getElementById('mediaBach').value) || 0;
+      let castellano = parseFloat(document.getElementById('castellano').value) || 0;
+      let extranjera = parseFloat(document.getElementById('extranjera').value) || 0;
+      let modalidad = parseFloat(document.getElementById('modalidad').value) || 0;
+
+      let histEsp = parseFloat(document.getElementById('historiaEsp').value) || 0;
+      let histFilo = parseFloat(document.getElementById('historiaFilo').value) || 0;
+      let historia = histEsp > 0 ? histEsp : histFilo;
+
+      let cooficial = parseFloat(document.getElementById('cooficial').value);
+
+      let asignaturas = [castellano, extranjera, modalidad, historia];
+      if(!isNaN(cooficial) && cooficial > 0){ asignaturas.push(cooficial); }
+
+      let faseGeneral = asignaturas.reduce((a,b)=>a+b,0)/asignaturas.length;
+      let notaAcceso = (0.6 * mediaBach) + (0.4 * faseGeneral);
+
+      let esp1 = parseFloat(document.getElementById('esp1').value) || 0;
+      let pond1 = parseFloat(document.getElementById('pond1').value);
+      let esp2 = parseFloat(document.getElementById('esp2').value) || 0;
+      let pond2 = parseFloat(document.getElementById('pond2').value);
+
+      let notaFinal = notaAcceso + (esp1 * pond1) + (esp2 * pond2);
+      if(notaFinal > 14) notaFinal = 14;
+
+      document.getElementById('resultado').style.display = 'block';
+      document.getElementById('resultado').innerHTML = `
+        <h3>Resultado de tu cálculo</h3>
+        Nota fase general: <strong>${faseGeneral.toFixed(2)}</strong><br>
+        Nota de acceso (60% Bach + 40% FG): <strong>${notaAcceso.toFixed(2)}</strong><br>
+        Nota final con específicas: <strong>${notaFinal.toFixed(2)}</strong>
+      `;
+    }
+
+    // ENTER para saltar entre inputs
+    document.querySelectorAll("input, select").forEach((el, i, arr) => {
+      el.addEventListener("keydown", (e) => {
+        if(e.key === "Enter"){ e.preventDefault(); let next = arr[i+1]; if(next) next.focus(); else document.querySelector("button").focus(); }
+      });
+    });
+  </script>
+</body>
+</html>
